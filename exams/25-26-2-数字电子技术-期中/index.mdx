@@ -197,9 +197,9 @@ $Y=\overline{A}D+CD+\overline{B}D$
 | 1 | 1 | 0 | 1 |
 | 1 | 1 | 1 | 1 |
 
-$Y=A\overline{B}\overline{C}+\overline{A}B\overline{C}+\overline{A}BC+ABC$
+$Y=A\overline{B}\ \overline{C}+\overline{A}B\overline{C}+\overline{A}BC+ABC$
 
-(2)
+(2) （答案不唯一，选择$A\backslash{BC}$亦可）
 | $AB\backslash{C}$ | 0 | 1 |
 | --- | --- | --- |
 | 00 | 0 | 0 |
@@ -244,6 +244,10 @@ $Y_2=AB+AC+BC$
 $Y_1$是和，$Y_2$是进位；加法器
 </Solution>
 
+<Figure src="题4.svg">
+    74LS138逻辑框图
+</Figure>
+
 ### 4.（10 分）
 
 试用一个 3 线--8 线译码器 74LS138 和适当的门电路设计一个组合逻辑电路，使其实现函数：
@@ -257,6 +261,10 @@ $F=m_2+m_3+m_4+m_7$
 
 将$S_1$置1，$\overline{S_2}$和$\overline{S_3}$置0，$A$、$B$、$C$分别接$A_2$、$A_1$、$A_0$，$\overline{Y_2}$、$\overline{Y_3}$、$\overline{Y_4}$、$\overline{Y_7}$通过与非门连在一起，输出端接$F$即可。
 </Solution>
+
+<Figure src="题5.svg">
+    CC4512逻辑框图
+</Figure>
 
 ### 5.（12 分）
 
@@ -287,6 +295,7 @@ $F=m_2+m_3+m_4+m_7$
 | 1 | 1 | $\overline{A}$ |
 
 <Solution>
+（答案不唯一，$D_n$处也可以接其他变量）
 $Y=0\ \overline{S_2}\ \overline{A}\ \overline{B}+S_1\ \overline{S_2}\ \overline{A}B+S_1\ \overline{S_2}A\overline{B}+\overline{S_1}\ \overline{S_2}AB+S_1\ S_2\overline{A}\ \overline{B}+1\ S_2\overline{A}B+\overline{S_1}\ S_2A\overline{B}+S_1\ S_2AB$
 
 将$A_0$接$B$，$A_1$接$A$，$A_2$接$S_2$，$D_0$置0，$D_5$置1，$D_1、D_2、D_4$接$S_1$，$D_3、D_6、D_7$接$\overline{S_1}$，$DIS$和$INH$置0即可。
@@ -308,6 +317,9 @@ $Y=0\ \overline{S_2}\ \overline{A}\ \overline{B}+S_1\ \overline{S_2}\ \overline{
 $F=\overline{A}\ \overline{B}C+\overline{A}B\overline{C}D+\overline{A}BCD+A\overline{B}\ \overline{C}\ \overline{D}+A\overline{B}C\overline{D}$
 
 (2)
+$F(ABCD)=\sum_{}^{}m(2,3,5,7,8,10)$
+
+$F=\overline{\overline{Y_2}\ \overline{Y_3}\ \overline{Y_5}\ \overline{Y_7}\ \overline{Y_7}\ \overline{Y_8}\ \overline{Y_{10}}}$
 <Figure src="题6答案.svg">
     题6答案
 </Figure>
